@@ -115,7 +115,22 @@ filter: alpha(opacity=50);
 opacity: .5;
 }
 .padding-15 {padding: 15px}
-.lgn {position: fixed;top: 25%;right: 0%;width: 15%}
+.lgn {position: fixed;top: 25%;right: 0%;width: 15%!important}
 .bottom-dashed {border-bottom: 1px dashed black}
 .pointer {cursor: pointer}
 #login-box {display: none}
+.alert {position: fixed;width: 100%;margin: 0;z-index: 10000}
+#success-message {display: none}
+#error-message {display: none}
+/* mail */
+.mail{font-size:12px;display:block;position:relative;border-top:1em solid transparent;height:0;width:0}
+.mail:before{content: '';top: -1.23em;left: -1.5em;display: block;position: absolute;border-left: 1.5em solid transparent;border-right: 1.5em solid transparent;border-bottom: 1em solid transparent;font-size: 0.8em}
+.mail-1 {border-left:1.5em solid #DBDBDB;border-right:1.5em solid #DBDBDB;border-bottom:1em solid #DBDBDB}
+.mail-2 {border-left:1.5em solid #2c2c2c;border-right:1.5em solid #2c2c2c;border-bottom:1em solid #2c2c2c}
+.mail-3 {border-left:1.5em solid #EB9292;border-right:1.5em solid #EB9292;border-bottom:1em solid #EB9292}
+.mail-4 {border-left:1.5em solid #FABE00;border-right:1.5em solid #FABE00;border-bottom:1em solid #FABE00}
+.mail-1:before{border-top: 1em solid #DBDBDB}
+.mail-2:before{border-top: 1em solid #2c2c2c}
+.mail-3:before {border-top: 1em solid #EB9292}
+.mail-4:hover {border-top: 1em solid #FABE00}
+.footer-banner {height: 55px;padding: 0;margin-top: -18px;margin-left: 30px;float: left;border: 2px solid gray;cursor: pointer}

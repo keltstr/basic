@@ -52,9 +52,17 @@ class ForumController extends \yii\web\Controller
     
     public function actionDelete() {
         $type = $_POST['type'];
-        if ($type == 'message') {
-            $model = ForumMessage::deleteAll(['id'=>$_POST['id']]);
-            return json_encode(['status'=>1]);
+        switch ($_POST['type']) {
+            case 'message':
+                $model = ForumMessage::deleteAll(['id'=>$_POST['id']]);
+                return json_encode(['status'=>1]);
+                break;
+            case 'post':
+                $model = \app\models\ForumPost::deleteAll(['id'=>$_POST['id']]);
+                return json_encode(['status'=>1]);
+                break;
+            default:
+                break;
         }
     }
 

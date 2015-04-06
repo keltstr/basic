@@ -22,7 +22,14 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 <body>
-
+<div class="alert alert-success alert-dismissible fade in" role="alert" id="success-message">
+    <button type="button" class="transparent" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+    <div class="text-center"><strong>Успешно!</strong> <span id="success-message-text"> Best check yo self, you're not looking too good.</span></div>
+</div>
+<div class="alert alert-danger alert-dismissible fade in" role="alert" id="error-message">
+    <button type="button" class="transparent" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+    <div class="text-center"><strong>Ошибка!</strong> <span id="error-message-text"> Best check yo self, you're not looking too good.</span></div>
+</div>
 <?php $this->beginBody() ?>
     <div class="wrap">
         <?php
@@ -60,15 +67,20 @@ AppAsset::register($this);
 
     <footer class="footer">
         <div class="container">
-            <p class="pull-left">&copy; experiment <?= date('Y') ?></p>
-            <p class="pull-right"><?= Yii::powered() ?></p>
+            <p class="pull-left col-lg-2">&copy; experiment <?= date('Y') ?></p>
+            <p>
+                <img class="footer-banner col-lg-2" src="http://freepsdgraphics.net/wp-content/uploads/2012/04/free-web-header-download.jpg">
+                <img class="footer-banner col-lg-2" src="http://www.dpi.vic.gov.au/__data/assets/image/0019/132139/banner_ag.jpg">
+                <img class="footer-banner col-lg-2" src="http://artsfwd.org/wp-content/uploads/2013/03/090413-NISAC-Web-Banner-NEW.png">
+            </p>
+            <p class="pull-right col-lg-2"><?= Yii::powered() ?></p>
         </div>
     </footer>
 
 <?php $this->endBody() ?>
 <?php if (Yii::$app->user->isGuest && $this->context->id == 'forum') { ?>
-<div class="alert alert-success alert-dismissible fade in lgn" role="alert" id="login-box">
-      <button type="button" class="transparent closeAlert"><span aria-hidden="true">×</span></button>
+<div class="alert alert-success alert-dismissible lgn" role="alert" id="login-box">
+    <button type="button" class="transparent" onclick="closeAlert();"><span aria-hidden="true">×</span></button>
       <p class="text-center">Форма входа</p>
       <?php
       $model = new app\models\LoginForm;

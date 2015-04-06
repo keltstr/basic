@@ -44,14 +44,26 @@ $(document).ready(function() {
               var data = JSON.parse(html);
               if (data.status == 1) {
                   $('#message-'+id).slideUp(500);
+                  setSuccess('Удаление прошло успешно!');
               }
           }
       });
-      ///
   });
 $('#login-show').click(function() {
     $('#login-box').fadeIn(1000);
 });
-$('.closeAlert').click(function() {
-      $('.alert').fadeOut(1000);
-});
+
+function closeAlert() {
+    $('.alert').fadeOut(1000);
+}
+function setSuccess(text) {
+    closeAlert();
+    $('#success-message-text').text(text);
+    $('#success-message').show();
+}
+
+function setError(text) {
+    closeAlert();
+    $('#error-message-text').text(text);
+    $('#error-message').show();
+}

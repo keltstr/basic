@@ -4,21 +4,15 @@ use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 ?>
-<h1>forum/index</h1>
-
-<p>
-    You may change the content of this page by modifying
-    the file <code><?= __FILE__; ?></code>.
-</p>
 <div class="col-lg-12">
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Тип</th>
-                <th>Тема</th>
-                <th>Сообщения</th>
-                <th>Раздел</th>
-                <th>Управление</th>
+                <th class="col-lg-1">Тип</th>
+                <th class="col-lg-7">Тема</th>
+                <th class="col-lg-1">Сообщения</th>
+                <th class="col-lg-2">Раздел</th>
+                <th class="col-lg-1">Управление</th>
             </tr>
         </thead>
         <tbody>
@@ -30,13 +24,36 @@ use yii\widgets\ActiveForm;
             $messagesCount = \app\models\ForumMessage::find()
                 ->where(['post_id' => $post->id])
                 ->count();
+            
+            $lastMessage = \app\models\ForumMessage::find()
+                ->where(['post_id' => $post->id])
+                ->orderBy('id desc')
+                ->select('dateadd')
+                ->one();
+            if (!$lastMessage) {
+                $lastMessage['dateadd'] = 1;
+            }
+
+            if ($lastMessage['dateadd'] == time()) {
+                $mailIcon = 4;
+                $mailTitle = 'Есть новые ответы';
+            } else if ($messagesCount > 50) {
+                $mailIcon = 3;
+                $mailTitle = 'Популярная тема';
+            } else if ($messagesCount > 10) {
+                $mailIcon = 2;
+                $mailTitle = 'Набирает обороты';
+            } else {
+                $mailIcon = 1;
+                $mailTitle = 'Обычная тема';
+            }
             ?>
-            <tr>
-                <td><div class="fire"><img src="/img/icons/message/message.png"></div></td>
-                <td><a href="<?php echo Url::to(['forum/post/','id'=>$post->id]) ?>"><?php echo $post->name; ?></a></td>
-                <td><?php echo $messagesCount; ?></td>
-                <td><a href="<?php echo Url::to(['forum/cat/','id'=>$post->category]) ?>"><?php echo $category->name; ?></a></td>
-                <td>---</td>
+            <tr id="message-<?php echo $post->id?>">
+                <td class="col-lg-1"><div class="mail mail-<?php echo $mailIcon;?>" title="<?php echo $mailTitle; ?>"><!--img src="/img/icons/message/message.png"--></div></td>
+                <td class="col-lg-7"><a href="<?php echo Url::to(['forum/post/','id'=>$post->id]) ?>"><?php echo $post->name; ?></a></td>
+                <td class="col-lg-1 text-center"><?php echo $messagesCount; ?></td>
+                <td class="col-lg-2"><a href="<?php echo Url::to(['forum/cat/','id'=>$post->category]) ?>"><?php echo $category->name; ?></a></td>
+                <td class="col-lg-1"><a data-id="<?php echo $post->id?>" data-type="post" class="close">Удалить</a></td>
             </tr>
             <?php } ?>
         </tbody>
