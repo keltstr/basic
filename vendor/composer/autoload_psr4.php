@@ -14,5 +14,11 @@ return array(
     'yii\\codeception\\' => array($vendorDir . '/yiisoft/yii2-codeception'),
     'yii\\bootstrap\\' => array($vendorDir . '/yiisoft/yii2-bootstrap'),
     'yii\\' => array($vendorDir . '/yiisoft/yii2'),
+    'oe\\modules\\backuprestore\\' => array($vendorDir . '/open-ecommerce/yii2-backuprestore'),
+    'kartik\\plugins\\fileinput\\' => array($vendorDir . '/kartik-v/bootstrap-fileinput'),
+    'kartik\\grid\\' => array($vendorDir . '/kartik-v/yii2-grid'),
+    'kartik\\file\\' => array($vendorDir . '/kartik-v/yii2-widget-fileinput'),
+    'kartik\\base\\' => array($vendorDir . '/kartik-v/yii2-krajee-base'),
+    'dosamigos\\ckeditor\\' => array($vendorDir . '/2amigos/yii2-ckeditor-widget'),
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),
 );

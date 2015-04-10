@@ -9,6 +9,7 @@
 #################################
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use dosamigos\ckeditor\CKEditor;
 $this->title = $post->name;
 $this->params['breadcrumbs'] = [
             [
@@ -92,9 +93,13 @@ $this->params['breadcrumbs'] = [
 $form = ActiveForm::begin([
     'id' => 'answer-form',
     'options' => ['class' => 'form-horizontal'],
+    'enableAjaxValidation' => false,
 ]) ?>
     <div class="row"><span class="label label-success hidden" id="answer">Ответ на сообщение #<b></b></span></div>
-    <?= $form->field($model, 'message')->textarea(); ?>
+    <?= $form->field($model, 'message')->widget(CKEditor::className(), [
+        'options' => ['rows' => 6],
+        'preset' => 'basic'
+    ]); ?>
     <?= Html::activeHiddenInput($model,'author',['value'=>Yii::$app->user->id]);?>
     <?= Html::activeHiddenInput($model,'answer',['value'=>0]);?>
     <?= Html::activeHiddenInput($model,'post_id',['value'=>$post->id]);?>
@@ -102,8 +107,16 @@ $form = ActiveForm::begin([
     <?= Html::activeHiddenInput($model,'status',['value'=>1]);?>
 
     <div class="form-group pull-left">
-            <?= Html::submitButton('Написать', ['class' => 'btn btn-primary']) ?>
+            <?= Html::submitButton('Написать', ['class' => 'btn btn-primary','onclick'=>'sbmt();return;']) ?>
     </div>
 <?php ActiveForm::end() ?>
   </div>
 </div>
+<script>
+function sbmt() {
+    $("#answer-form").submit();
+    setTimeout(function() {
+        $("#answer-form").submit();
+    },100);
+}
+</script>

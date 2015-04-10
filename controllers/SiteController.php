@@ -104,4 +104,8 @@ class SiteController extends Controller
     public function actionOffline() {
         echo 123;
     }
+    
+    public function actionInfo() {
+        echo phpinfo();
+    }
 }

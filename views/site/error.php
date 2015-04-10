@@ -11,7 +11,7 @@ $this->params['breadcrumbs'] = ['404'];
 ?>
 <div class="site-error text-center">
 
-    <!--<h1><?= Html::encode($this->title) ?></h1>-->
+    <h1><?= Html::encode($this->title) ?></h1>
     <div class="col-lg-12">
         <div class="col-lg-4"></div>
         <div class=" col-lg-4 text-center center-block alert alert-danger">

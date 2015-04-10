@@ -17,6 +17,12 @@ $config = [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+        'backuprestore' => [
+                'class' => 'yii\open-ecommerce\yii2-backuprestore\Module',
+                //'layout' => '@admin-views/layouts/main', or what ever layout you use
+        //        ...
+        //        ...
+            ],
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
