@@ -23,6 +23,12 @@ $config = [
         //        ...
         //        ...
             ],
+//        'components' => [
+//            'thumbnail' => [
+//                'class' => 'himiklab\thumbnail\EasyThumbnail',
+//                'cacheAlias' => 'assets/gallery_thumbnails',
+//            ],
+//        ],
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,

@@ -102,4 +102,31 @@ return array (
       '@dosamigos/ckeditor' => $vendorDir . '/2amigos/yii2-ckeditor-widget',
     ),
   ),
+  'yiisoft/yii2-imagine' => 
+  array (
+    'name' => 'yiisoft/yii2-imagine',
+    'version' => '2.0.3.0',
+    'alias' => 
+    array (
+      '@yii/imagine' => $vendorDir . '/yiisoft/yii2-imagine',
+    ),
+  ),
+  'himiklab/yii2-easy-thumbnail-image-helper' => 
+  array (
+    'name' => 'himiklab/yii2-easy-thumbnail-image-helper',
+    'version' => '1.0.1.0',
+    'alias' => 
+    array (
+      '@himiklab/thumbnail' => $vendorDir . '/himiklab/yii2-easy-thumbnail-image-helper',
+    ),
+  ),
+  'nirvana-msu/yii2-prettyphoto' => 
+  array (
+    'name' => 'nirvana-msu/yii2-prettyphoto',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@nirvana/prettyphoto' => $vendorDir . '/nirvana-msu/yii2-prettyphoto',
+    ),
+  ),
 );

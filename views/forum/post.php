@@ -10,6 +10,8 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use dosamigos\ckeditor\CKEditor;
+use himiklab\thumbnail\EasyThumbnailImage;
+use nirvana\prettyphoto\PrettyPhoto;
 $this->title = $post->name;
 $this->params['breadcrumbs'] = [
             [
@@ -34,7 +36,9 @@ $this->params['breadcrumbs'] = [
     <div class="media message" id='message-<?php echo $message->id ?>'>
       <div class="media-left">
         <a href="#message-<?php echo $message->id ?>">
-            <img class="media-object" data-src="holder.js/64x64" alt="64x64" style="width: 64px; height: 64px;" src="/img/avatars/<?php echo $post->author; ?>.jpg" data-holder-rendered="true">
+            <!--<img class="media-object" data-src="holder.js/64x64" alt="64x64" style="width: 64px; height: 64px;" src="/img/avatars/<?php echo $post->author; ?>.jpg" data-holder-rendered="true">-->
+            
+            <?php echo EasyThumbnailImage::thumbnailImg("img/avatars/$message->author.png",64,64,EasyThumbnailImage::THUMBNAIL_OUTBOUND,['alt' => $userName,'class'=>'media-object']);?>
             #<?php echo $message->id ?>            
         </a>
           <?php echo $userName ?>[<?php echo $message->author; ?>]
@@ -48,6 +52,18 @@ $this->params['breadcrumbs'] = [
                     <button type="button" class="transparent setQuote" data-dismiss="alert" aria-label="Close"  data-id="<?php echo $message->id ?>" data-type="message" data-type="message" data-toggle="tooltip" data-placement="top" title="Цитировать"><span class="fa fa-quote-left" aria-hidden="true"></span></button>
                 </div>
                 <div class="panel-body"><?php echo $message->message ?></div>
+                <?php
+                PrettyPhoto::widget([
+                    'target' => ".pretty",
+                    'pluginOptions' => [
+                        'opacity' => 0.60,
+                        'theme' => PrettyPhoto::THEME_DARK_SQUARE,
+                        'social_tools' => true,
+                        'autoplay_slideshow' => false,
+                        'modal' => true
+                    ],
+                ]);
+                ?>
             </div>
         <?php
         $answers = \app\models\ForumMessage::find()
@@ -59,7 +75,8 @@ $this->params['breadcrumbs'] = [
         <div class="media answer" id='message-<?php echo $answer->id ?>'>
           <div class="media-left">
             <!--<a href="#">-->
-              <img class="media-object" data-src="holder.js/64x64" alt="64x64" style="width: 64px; height: 64px;" src="/img/avatars/<?php echo $answer->author; ?>.jpg" data-holder-rendered="true">
+              <!--<img class="media-object" data-src="holder.js/64x64" alt="64x64" style="width: 64px; height: 64px;" src="/img/avatars/<?php echo $answer->author; ?>.jpg" data-holder-rendered="true">-->
+            <?php echo EasyThumbnailImage::thumbnailImg("img/avatars/$answer->author.png",64,64,EasyThumbnailImage::THUMBNAIL_OUTBOUND,['alt' => $userNameAnswer,'class'=>'media-object']);?>
               #<?php echo $answer->id ?>
             <!--</a>-->
             <?php echo $userNameAnswer ?>[<?php echo $answer->author; ?>]

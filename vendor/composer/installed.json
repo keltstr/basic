@@ -259,60 +259,6 @@
         "installation-source": "dist"
     },
     {
-        "name": "bower-asset/jquery.inputmask",
-        "version": "3.1.61",
-        "version_normalized": "3.1.61.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/RobinHerbots/jquery.inputmask.git",
-            "reference": "f2c086411d2557fc485c47afb3cecfa6c1de9ee2"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/RobinHerbots/jquery.inputmask/zipball/f2c086411d2557fc485c47afb3cecfa6c1de9ee2",
-            "reference": "f2c086411d2557fc485c47afb3cecfa6c1de9ee2",
-            "shasum": ""
-        },
-        "require": {
-            "bower-asset/jquery": ">=1.7"
-        },
-        "type": "bower-asset-library",
-        "extra": {
-            "bower-asset-main": [
-                "./dist/inputmask/jquery.inputmask.js",
-                "./dist/inputmask/jquery.inputmask.extensions.js",
-                "./dist/inputmask/jquery.inputmask.date.extensions.js",
-                "./dist/inputmask/jquery.inputmask.numeric.extensions.js",
-                "./dist/inputmask/jquery.inputmask.phone.extensions.js",
-                "./dist/inputmask/jquery.inputmask.regex.extensions.js"
-            ],
-            "bower-asset-ignore": [
-                "**/.*",
-                "qunit/",
-                "nuget/",
-                "tools/",
-                "js/",
-                "*.md",
-                "build.properties",
-                "build.xml",
-                "jquery.inputmask.jquery.json"
-            ]
-        },
-        "installation-source": "dist",
-        "license": [
-            "http://opensource.org/licenses/mit-license.php"
-        ],
-        "description": "jquery.inputmask is a jquery plugin which create an input mask.",
-        "keywords": [
-            "form",
-            "input",
-            "inputmask",
-            "jquery",
-            "mask",
-            "plugins"
-        ]
-    },
-    {
         "name": "cebe/markdown",
         "version": "1.0.2",
         "version_normalized": "1.0.2.0",
@@ -1126,50 +1072,6 @@
         ]
     },
     {
-        "name": "open-ecommerce/yii2-backuprestore",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/open-ecommerce/yii2-backuprestore.git",
-            "reference": "1ea6e80ba161af3d68a8b8d0eb725d034fb22e5d"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/open-ecommerce/yii2-backuprestore/zipball/1ea6e80ba161af3d68a8b8d0eb725d034fb22e5d",
-            "reference": "1ea6e80ba161af3d68a8b8d0eb725d034fb22e5d",
-            "shasum": ""
-        },
-        "require": {
-            "yiisoft/yii2": "*"
-        },
-        "time": "2015-04-07 17:03:01",
-        "type": "yii2-extension",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "oe\\modules\\backuprestore\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "Apache-2.0"
-        ],
-        "authors": [
-            {
-                "name": "open-ecommerce.org",
-                "email": "info@open-ecommerce.org"
-            }
-        ],
-        "description": "Database Backup and Restore functionality",
-        "keywords": [
-            "backup",
-            "database",
-            "restore",
-            "yii2"
-        ]
-    },
-    {
         "name": "ckeditor/ckeditor",
         "version": "4.4.0",
         "version_normalized": "4.4.0.0",
@@ -1256,6 +1158,314 @@
             "extension",
             "widget",
             "yii"
+        ]
+    },
+    {
+        "name": "open-ecommerce/yii2-backuprestore",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/open-ecommerce/yii2-backuprestore.git",
+            "reference": "1ea6e80ba161af3d68a8b8d0eb725d034fb22e5d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/open-ecommerce/yii2-backuprestore/zipball/1ea6e80ba161af3d68a8b8d0eb725d034fb22e5d",
+            "reference": "1ea6e80ba161af3d68a8b8d0eb725d034fb22e5d",
+            "shasum": ""
+        },
+        "require": {
+            "yiisoft/yii2": "*"
+        },
+        "time": "2015-04-07 17:03:01",
+        "type": "yii2-extension",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "oe\\modules\\backuprestore\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "open-ecommerce.org",
+                "email": "info@open-ecommerce.org"
+            }
+        ],
+        "description": "Database Backup and Restore functionality",
+        "keywords": [
+            "backup",
+            "database",
+            "restore",
+            "yii2"
+        ]
+    },
+    {
+        "name": "imagine/imagine",
+        "version": "v0.5.0",
+        "version_normalized": "0.5.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/avalanche123/Imagine.git",
+            "reference": "f64ec666baaa800edcbf237db41121a569230709"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/f64ec666baaa800edcbf237db41121a569230709",
+            "reference": "f64ec666baaa800edcbf237db41121a569230709",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.2"
+        },
+        "require-dev": {
+            "sami/sami": "dev-master"
+        },
+        "suggest": {
+            "ext-gd": "to use the GD implementation",
+            "ext-gmagick": "to use the Gmagick implementation",
+            "ext-imagick": "to use the Imagick implementation"
+        },
+        "time": "2013-07-10 17:25:36",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Imagine": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Bulat Shakirzyanov",
+                "email": "mallluhuct@gmail.com",
+                "homepage": "http://avalanche123.com"
+            }
+        ],
+        "description": "Image processing for PHP 5.3",
+        "homepage": "http://imagine.readthedocs.org/",
+        "keywords": [
+            "drawing",
+            "graphics",
+            "image manipulation",
+            "image processing"
+        ]
+    },
+    {
+        "name": "yiisoft/yii2-imagine",
+        "version": "2.0.3",
+        "version_normalized": "2.0.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/yiisoft/yii2-imagine.git",
+            "reference": "0961343138b65bba447de84b2b300899617e6acc"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/yiisoft/yii2-imagine/zipball/0961343138b65bba447de84b2b300899617e6acc",
+            "reference": "0961343138b65bba447de84b2b300899617e6acc",
+            "shasum": ""
+        },
+        "require": {
+            "imagine/imagine": "0.5.*",
+            "yiisoft/yii2": "*"
+        },
+        "time": "2015-03-01 06:22:44",
+        "type": "yii2-extension",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "yii\\imagine\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Antonio Ramirez",
+                "email": "amigo.cobos@gmail.com"
+            }
+        ],
+        "description": "The Imagine integration for the Yii framework",
+        "keywords": [
+            "helper",
+            "image",
+            "imagine",
+            "yii2"
+        ]
+    },
+    {
+        "name": "himiklab/yii2-easy-thumbnail-image-helper",
+        "version": "1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/himiklab/yii2-easy-thumbnail-image-helper.git",
+            "reference": "0013b7ddf9146893cda0e66d4222d433327f8892"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/himiklab/yii2-easy-thumbnail-image-helper/zipball/0013b7ddf9146893cda0e66d4222d433327f8892",
+            "reference": "0013b7ddf9146893cda0e66d4222d433327f8892",
+            "shasum": ""
+        },
+        "require": {
+            "yiisoft/yii2": "*",
+            "yiisoft/yii2-imagine": "*"
+        },
+        "time": "2014-11-13 14:51:48",
+        "type": "yii2-extension",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "himiklab\\thumbnail\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "HimikLab",
+                "homepage": "https://github.com/himiklab/"
+            }
+        ],
+        "description": "Yii2 helper for creating and caching thumbnails on real time",
+        "keywords": [
+            "helper",
+            "image",
+            "thumbnail",
+            "yii2"
+        ]
+    },
+    {
+        "name": "bower-asset/jquery.inputmask",
+        "version": "3.1.62",
+        "version_normalized": "3.1.62.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/RobinHerbots/jquery.inputmask.git",
+            "reference": "da1a274cefa18a52a0519ac7ffe8e8d31e950eae"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/RobinHerbots/jquery.inputmask/zipball/da1a274cefa18a52a0519ac7ffe8e8d31e950eae",
+            "reference": "da1a274cefa18a52a0519ac7ffe8e8d31e950eae",
+            "shasum": ""
+        },
+        "require": {
+            "bower-asset/jquery": ">=1.7"
+        },
+        "type": "bower-asset-library",
+        "extra": {
+            "bower-asset-main": [
+                "./dist/inputmask/jquery.inputmask.js",
+                "./dist/inputmask/jquery.inputmask.extensions.js",
+                "./dist/inputmask/jquery.inputmask.date.extensions.js",
+                "./dist/inputmask/jquery.inputmask.numeric.extensions.js",
+                "./dist/inputmask/jquery.inputmask.phone.extensions.js",
+                "./dist/inputmask/jquery.inputmask.regex.extensions.js"
+            ],
+            "bower-asset-ignore": [
+                "**/.*",
+                "qunit/",
+                "nuget/",
+                "tools/",
+                "js/",
+                "*.md",
+                "build.properties",
+                "build.xml",
+                "jquery.inputmask.jquery.json"
+            ]
+        },
+        "installation-source": "dist",
+        "license": [
+            "http://opensource.org/licenses/mit-license.php"
+        ],
+        "description": "jquery.inputmask is a jquery plugin which create an input mask.",
+        "keywords": [
+            "form",
+            "input",
+            "inputmask",
+            "jquery",
+            "mask",
+            "plugins"
+        ]
+    },
+    {
+        "name": "bower-asset/jquery-prettyPhoto",
+        "version": "3.1.4",
+        "version_normalized": "3.1.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/scaron/prettyphoto",
+            "reference": "master"
+        },
+        "type": "bower-asset-library",
+        "installation-source": "source"
+    },
+    {
+        "name": "nirvana-msu/yii2-prettyphoto",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/nirvana-msu/yii2-prettyphoto.git",
+            "reference": "1ba59ec81549b70dd8bc652d46c74a5cfa8c9117"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/nirvana-msu/yii2-prettyphoto/zipball/1ba59ec81549b70dd8bc652d46c74a5cfa8c9117",
+            "reference": "1ba59ec81549b70dd8bc652d46c74a5cfa8c9117",
+            "shasum": ""
+        },
+        "require": {
+            "bower-asset/jquery-prettyphoto": "*",
+            "yiisoft/yii2": "*"
+        },
+        "time": "2015-03-06 22:48:44",
+        "type": "yii2-extension",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "nirvana\\prettyphoto\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Alexander Stepanov",
+                "email": "student_vmk@mail.ru"
+            }
+        ],
+        "description": "Yii2 extension for prettyPhoto jQuery lightbox clone",
+        "keywords": [
+            "prettyPhoto",
+            "widget",
+            "yii2"
         ]
     }
 ]
