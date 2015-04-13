@@ -47,7 +47,7 @@ class ForumCategory extends \yii\db\ActiveRecord
         ];
     }
     
-    public function catlist() {
+    public static function catlist() {
         $model = ForumCategory::find()->where(['status'=>1])->all();
         $result = [];
         foreach ($model as $data) {

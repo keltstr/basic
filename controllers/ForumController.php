@@ -24,8 +24,10 @@ class ForumController extends \yii\web\Controller
         $post = $this->loadModel($id);
         $model = new \app\models\ForumMessage;
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-            $model->save();
+            $model->save(false);
+            $model = new \app\models\ForumMessage;
         }
+
         $messages = \app\models\ForumMessage::find()
             ->where(['status' => 1,'post_id'=>$id,'answer'=>0])
             ->orderBy('id asc')
@@ -65,5 +67,5 @@ class ForumController extends \yii\web\Controller
                 break;
         }
     }
-
+    
 }

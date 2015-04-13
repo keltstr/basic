@@ -20,6 +20,9 @@ class ForumMessage extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    
+    public $reCaptcha;
+    
     public static function tableName()
     {
         return 'forum_message';
@@ -34,7 +37,8 @@ class ForumMessage extends \yii\db\ActiveRecord
             [['post_id', 'author', 'message', 'dateadd'], 'required'],
             [['post_id', 'author', 'answer', 'status'], 'integer'],
             [['message'], 'string'],
-            [['dateadd'], 'string', 'max' => 30]
+            [['dateadd'], 'string', 'max' => 30],
+            [['reCaptcha'], \himiklab\yii2\recaptcha\ReCaptchaValidator::className(), 'secret' => '6LcLNQUTAAAAAI5kJGhHKJ0DqVkosYjG_snBOY4S'],
         ];
     }
 
@@ -51,6 +55,7 @@ class ForumMessage extends \yii\db\ActiveRecord
             'answer' => 'Answer',
             'status' => 'Status',
             'dateadd' => 'Dateadd',
+            'reCaptcha' => 'Я не робот'
         ];
     }
 }

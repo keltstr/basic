@@ -117,6 +117,10 @@ $form = ActiveForm::begin([
         'options' => ['rows' => 6],
         'preset' => 'basic'
     ]); ?>
+<?= $form->field($model, 'reCaptcha')->widget(
+    \himiklab\yii2\recaptcha\ReCaptcha::className(),
+    ['siteKey' => '6LcLNQUTAAAAAHAtmbx7mgAGmXnMF8-Z04Yz-0L5']
+) ?>
     <?= Html::activeHiddenInput($model,'author',['value'=>Yii::$app->user->id]);?>
     <?= Html::activeHiddenInput($model,'answer',['value'=>0]);?>
     <?= Html::activeHiddenInput($model,'post_id',['value'=>$post->id]);?>

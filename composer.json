@@ -23,7 +23,8 @@
         "kartik-v/yii2-grid": "~3.0",
         "2amigos/yii2-ckeditor-widget": "*",
         "himiklab/yii2-easy-thumbnail-image-helper": "*",
-	"nirvana-msu/yii2-prettyphoto": "1.0.*@dev"
+	"nirvana-msu/yii2-prettyphoto": "1.0.*@dev",
+        "himiklab/yii2-recaptcha-widget": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
