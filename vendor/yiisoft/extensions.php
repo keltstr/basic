@@ -138,4 +138,13 @@ return array (
       '@himiklab/yii2/recaptcha' => $vendorDir . '/himiklab/yii2-recaptcha-widget',
     ),
   ),
+  'himiklab/yii2-ipgeobase-component' => 
+  array (
+    'name' => 'himiklab/yii2-ipgeobase-component',
+    'version' => '1.0.2.0',
+    'alias' => 
+    array (
+      '@himiklab/ipgeobase' => $vendorDir . '/himiklab/yii2-ipgeobase-component',
+    ),
+  ),
 );

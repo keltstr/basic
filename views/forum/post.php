@@ -41,6 +41,7 @@ $this->params['breadcrumbs'] = [
             <?php echo EasyThumbnailImage::thumbnailImg("img/avatars/$message->author.png",64,64,EasyThumbnailImage::THUMBNAIL_OUTBOUND,['alt' => $userName,'class'=>'media-object']);?>
             #<?php echo $message->id ?>            
         </a>
+        <?php echo '['.$ipData['country'].']'.$ipData['city']; ?>
           <?php echo $userName ?>[<?php echo $message->author; ?>]
       </div>
       <div class="media-body">
@@ -79,6 +80,7 @@ $this->params['breadcrumbs'] = [
             <?php echo EasyThumbnailImage::thumbnailImg("img/avatars/$answer->author.png",64,64,EasyThumbnailImage::THUMBNAIL_OUTBOUND,['alt' => $userNameAnswer,'class'=>'media-object']);?>
               #<?php echo $answer->id ?>
             <!--</a>-->
+            <?php echo '['.$ipData['country'].']'.$ipData['city']; ?>
             <?php echo $userNameAnswer ?>[<?php echo $answer->author; ?>]
           </div>
           <div class="media-body">

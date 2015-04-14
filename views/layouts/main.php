@@ -73,7 +73,7 @@ AppAsset::register($this);
                 <img class="footer-banner col-lg-2" title="banner2" src="http://www.dpi.vic.gov.au/__data/assets/image/0019/132139/banner_ag.jpg">
                 <img class="footer-banner col-lg-2" title="banner3" src="http://artsfwd.org/wp-content/uploads/2013/03/090413-NISAC-Web-Banner-NEW.png">
             </p>
-            <p class="pull-right col-lg-2"><?= Yii::powered() ?></p>
+            <p class="pull-right col-lg-3"><?= Yii::powered() ?></p>
         </div>
     </footer>
 

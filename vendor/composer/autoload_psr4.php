@@ -23,6 +23,7 @@ return array(
     'kartik\\base\\' => array($vendorDir . '/kartik-v/yii2-krajee-base'),
     'himiklab\\yii2\\recaptcha\\' => array($vendorDir . '/himiklab/yii2-recaptcha-widget'),
     'himiklab\\thumbnail\\' => array($vendorDir . '/himiklab/yii2-easy-thumbnail-image-helper'),
+    'himiklab\\ipgeobase\\' => array($vendorDir . '/himiklab/yii2-ipgeobase-component'),
     'dosamigos\\ckeditor\\' => array($vendorDir . '/2amigos/yii2-ckeditor-widget'),
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),
 );

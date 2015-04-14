@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c0184bfa3a9474da0bee5be7a7c7183b",
+    "hash": "87181058fbc32e4537c228ed17d1336d",
     "packages": [
         {
             "name": "2amigos/yii2-ckeditor-widget",
@@ -455,6 +455,48 @@
                 "yii2"
             ],
             "time": "2014-11-13 14:51:48"
+        },
+        {
+            "name": "himiklab/yii2-ipgeobase-component",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/himiklab/yii2-ipgeobase-component.git",
+                "reference": "54972f68d0c8c6007db619ff43d11705c472189a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/himiklab/yii2-ipgeobase-component/zipball/54972f68d0c8c6007db619ff43d11705c472189a",
+                "reference": "54972f68d0c8c6007db619ff43d11705c472189a",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "himiklab\\ipgeobase\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "HimikLab",
+                    "homepage": "https://github.com/himiklab"
+                }
+            ],
+            "description": "Yii2 IpGeoBase.ru wrapper",
+            "keywords": [
+                "geolocation",
+                "ipgeobase",
+                "ipgeobase.ru",
+                "yii2"
+            ],
+            "time": "2015-01-16 11:29:05"
         },
         {
             "name": "himiklab/yii2-recaptcha-widget",

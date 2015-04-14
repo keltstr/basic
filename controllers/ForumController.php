@@ -37,7 +37,8 @@ class ForumController extends \yii\web\Controller
             ->orderBy('id asc')
             ->all();
         $category = \app\models\ForumCategory::findOne($post->category);
-        return $this->render('post',array('post'=>$post,'messages'=>$messages,'category'=>$category,'model'=>$model));
+        $ipData = Yii::$app->ipgeobase->getLocation($_SERVER["REMOTE_ADDR"]);
+        return $this->render('post',array('post'=>$post,'messages'=>$messages,'category'=>$category,'model'=>$model,'ipData'=>$ipData));
     }
     
     public function actionCat($id) {

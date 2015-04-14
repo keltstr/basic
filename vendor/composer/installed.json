@@ -1512,5 +1512,49 @@
             "widget",
             "yii2"
         ]
+    },
+    {
+        "name": "himiklab/yii2-ipgeobase-component",
+        "version": "1.0.2",
+        "version_normalized": "1.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/himiklab/yii2-ipgeobase-component.git",
+            "reference": "54972f68d0c8c6007db619ff43d11705c472189a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/himiklab/yii2-ipgeobase-component/zipball/54972f68d0c8c6007db619ff43d11705c472189a",
+            "reference": "54972f68d0c8c6007db619ff43d11705c472189a",
+            "shasum": ""
+        },
+        "require": {
+            "yiisoft/yii2": "*"
+        },
+        "time": "2015-01-16 11:29:05",
+        "type": "yii2-extension",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "himiklab\\ipgeobase\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "HimikLab",
+                "homepage": "https://github.com/himiklab"
+            }
+        ],
+        "description": "Yii2 IpGeoBase.ru wrapper",
+        "keywords": [
+            "geolocation",
+            "ipgeobase",
+            "ipgeobase.ru",
+            "yii2"
+        ]
     }
 ]
