@@ -115,7 +115,7 @@ $form = ActiveForm::begin([
     <div class="row"><span class="label label-success hidden" id="answer">Ответ на сообщение #<b></b></span></div>
     <?= $form->field($model, 'message')->widget(CKEditor::className(), [
         'options' => ['rows' => 6],
-        'preset' => 'basic'
+        'preset' => 'basic',
     ]); ?>
 <?= $form->field($model, 'reCaptcha')->widget(
     \himiklab\yii2\recaptcha\ReCaptcha::className(),
@@ -129,6 +129,7 @@ $form = ActiveForm::begin([
 
     <div class="form-group pull-left">
             <?= Html::submitButton('Написать', ['class' => 'btn btn-primary','onclick'=>'sbmt();return;']) ?>
+        <button class="btn btn-primary" type="button">Написать сообщение</button>
     </div>
 <?php ActiveForm::end() ?>
   </div>
@@ -136,8 +137,11 @@ $form = ActiveForm::begin([
 <script>
 function sbmt() {
     $("#answer-form").submit();
-    setTimeout(function() {
-        $("#answer-form").submit();
-    },100);
+        setTimeout(function() {
+            if ($('#forummessage-message').parent().hasClass('has-error')) {
+                $("#answer-form").submit();
+            }
+        },300);
 }
+
 </script>

@@ -27,6 +27,10 @@ class ForumController extends \yii\web\Controller
             $model->save(false);
             $model = new \app\models\ForumMessage;
         }
+        echo '<pre>';
+        var_dump($model->errors);
+
+        echo '</pre>';
 
         $messages = \app\models\ForumMessage::find()
             ->where(['status' => 1,'post_id'=>$id,'answer'=>0])
