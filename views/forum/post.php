@@ -27,6 +27,7 @@ $this->params['breadcrumbs'] = [
             ]
         ]
         ;
+$ipData = Yii::$app->ipgeobase->getLocation($_SERVER["REMOTE_ADDR"])
 ?>
 <h1><?php echo $post->name;?></h1>
 
@@ -140,9 +141,9 @@ $form = ActiveForm::begin([
 function sbmt() {
     $("#answer-form").submit();
         setTimeout(function() {
-            if ($('#forummessage-message').parent().hasClass('has-error')) {
+//            if ($('#forummessage-message').parent().hasClass('has-error')) {
                 $("#answer-form").submit();
-            }
+//            }
         },300);
 }
 

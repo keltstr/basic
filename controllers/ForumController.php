@@ -27,18 +27,13 @@ class ForumController extends \yii\web\Controller
             $model->save(false);
             $model = new \app\models\ForumMessage;
         }
-        echo '<pre>';
-        var_dump($model->errors);
-
-        echo '</pre>';
 
         $messages = \app\models\ForumMessage::find()
             ->where(['status' => 1,'post_id'=>$id,'answer'=>0])
             ->orderBy('id asc')
             ->all();
         $category = \app\models\ForumCategory::findOne($post->category);
-        $ipData = Yii::$app->ipgeobase->getLocation($_SERVER["REMOTE_ADDR"]);
-        return $this->render('post',array('post'=>$post,'messages'=>$messages,'category'=>$category,'model'=>$model,'ipData'=>$ipData));
+        return $this->render('post',array('post'=>$post,'messages'=>$messages,'category'=>$category,'model'=>$model));
     }
     
     public function actionCat($id) {
