@@ -51,7 +51,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                                 <td><?=$banner->description?></td>
                                                 <td><?=$banner->url?></td>
                                                 <td class="center sorting_1"><?=$banner->status?></td>
-                                                <td class="center"><?php echo Html::a('Редактировать',['/admin/banner/edit/id/'.$banner->id])?></td>
+                                                <td class="center"><?php echo Html::a('Редактировать',['/admin/banner/edit/id/'.$banner->id])?> | <?php echo Html::a('Удалить',['/admin/banner/delete/id/'.$banner->id])?></td>
+                                                
                                             </tr>
                                         <?php } ?>
                                     </tbody>
@@ -65,7 +66,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             </div>
                             <div class="col-sm-6">
                                 <div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate">
-                                    <?php echo \yii\widgets\LinkPager::widget(['pagination' => $pagination,]); ?>
+                                    <?php echo \yii\widgets\LinkPager::widget(['pagination' => $pagination]); ?>
                                 </div>
                             </div>
                         </div>

@@ -57,6 +57,14 @@ class BannerController extends Controller
         ]);
     }
     
+    public function actionDelete($id) {
+        $model = $this->loadModel($id);
+        if ($model->delete()) {
+            Yii::$app->getSession()->setFlash('success', 'Вы успешно удалили баннер');
+            $this->redirect('/admin/banner/index');
+        }
+    }
+
         public function loadModel($id)
     {
         $model = \app\models\Banner::findOne($id);

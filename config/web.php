@@ -65,6 +65,7 @@ $config = [
                 '/forum/cat/id/<id:\d+>' => '/forum/cat',
                 // banner
                 '/admin/banner/edit/id/<id:\d+>' => '/admin/banner/add',
+                '/admin/banner/delete/id/<id:\d+>' => '/admin/banner/delete',
                 '/about/' => '/site/about/',
                 '/login' => '/site/login',
                 
