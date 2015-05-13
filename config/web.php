@@ -63,9 +63,17 @@ $config = [
                 // your rules go here
                 '/forum/post/id/<id:\d+>' => '/forum/post',
                 '/forum/cat/id/<id:\d+>' => '/forum/cat',
+                // banner
+                '/admin/banner/edit/id/<id:\d+>' => '/admin/banner/add',
                 '/about/' => '/site/about/',
                 '/login' => '/site/login',
+                
             ],
+        ],
+    ],
+    'modules' => [
+        'admin' => [
+            'class' => 'app\modules\Admin\Index',
         ],
     ],
     'params' => $params,

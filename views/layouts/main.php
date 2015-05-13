@@ -69,9 +69,15 @@ AppAsset::register($this);
         <div class="container">
             <p class="pull-left col-lg-2">&copy; experiment <?= date('Y') ?></p>
             <p>
-                <img class="footer-banner col-lg-2" title="banner1" src="http://freepsdgraphics.net/wp-content/uploads/2012/04/free-web-header-download.jpg">
-                <img class="footer-banner col-lg-2" title="banner2" src="http://www.dpi.vic.gov.au/__data/assets/image/0019/132139/banner_ag.jpg">
-                <img class="footer-banner col-lg-2" title="banner3" src="http://artsfwd.org/wp-content/uploads/2013/03/090413-NISAC-Web-Banner-NEW.png">
+                <?php
+                $banners = app\models\Banner::find()
+                    ->where(['status' => 1])
+                    ->orderBy('id desc')
+                    ->limit(3)
+                    ->all();
+                foreach ($banners as $banner) { ?>
+                <a href="<?=$banner->url;?>" target="_blank"><img class="footer-banner col-lg-2" title="<?=$banner->description;?>" src="<?=$banner->image;?>"></a>
+                <?php } ?>
             </p>
             <p class="pull-right col-lg-3"><?= Yii::powered() ?></p>
         </div>
@@ -108,4 +114,12 @@ AppAsset::register($this);
 <?php } ?>
 </body>
 </html>
+<?php 
+if (Yii::$app->session->getFlash('success')) {
+    echo '<script>setSuccess("'.Yii::$app->session->getFlash('success').'")</script>';
+}
+if (Yii::$app->session->getFlash('error')) {
+    echo '<script>setError("'.Yii::$app->session->getFlash('error').'")</script>';
+}
+?>
 <?php $this->endPage() ?>

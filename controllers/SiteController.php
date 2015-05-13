@@ -63,6 +63,9 @@ class SiteController extends Controller
             if (isset($_POST['LoginForm']['returnUrl'])) {
                 return $this->redirect($_POST['LoginForm']['returnUrl']);
             } else {
+                if ($model->username == 'admin') {
+                    return $this->redirect('/admin/action/index');
+                }
                 return $this->goBack();
             }
         } else {
