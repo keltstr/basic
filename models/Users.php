@@ -11,6 +11,7 @@ use Yii;
  * @property string $login
  * @property string $password
  * @property integer $status
+ * @property integer $admin
  */
 class Users extends \yii\db\ActiveRecord
 {
@@ -29,7 +30,7 @@ class Users extends \yii\db\ActiveRecord
     {
         return [
             [['login', 'password'], 'required'],
-            [['status'], 'integer'],
+            [['status', 'admin'], 'integer'],
             [['login'], 'string', 'max' => 50],
             [['password'], 'string', 'max' => 32]
         ];
@@ -45,6 +46,7 @@ class Users extends \yii\db\ActiveRecord
             'login' => 'Login',
             'password' => 'Password',
             'status' => 'Status',
+            'admin' => 'Admin',
         ];
     }
 }

@@ -138,7 +138,8 @@ class User extends Component
     public $returnUrlParam = '__returnUrl';
 
     private $_access = [];
-
+    
+    public $isAdmin = false;
 
     /**
      * Initializes the application component.
@@ -182,7 +183,11 @@ class User extends Component
         return $this->_identity;
     }
 
-    /**
+    public function isAdmin() {
+        return Yii::$app->session->get('isAdmin');
+    }
+
+        /**
      * Sets the user identity object.
      *
      * Note that this method does not deal with session or cookie. You should usually use [[switchIdentity()]]
@@ -233,7 +238,13 @@ class User extends Component
     public function login(IdentityInterface $identity, $duration = 0)
     {
         if ($this->beforeLogin($identity, false, $duration)) {
-            $this->switchIdentity($identity, $duration);
+            
+            $userModel = \app\models\Users::findOne($identity->id);
+            if ($userModel->admin) {
+                $this->isAdmin = true;
+            }
+            
+            $this->switchIdentity($identity, $duration, $this->isAdmin);
             $id = $identity->getId();
             $ip = Yii::$app->getRequest()->getUserIP();
             if ($this->enableSession) {
@@ -560,7 +571,7 @@ class User extends Component
      * @param integer $duration number of seconds that the user can remain in logged-in status.
      * This parameter is used only when `$identity` is not null.
      */
-    public function switchIdentity($identity, $duration = 0)
+    public function switchIdentity($identity, $duration = 0, $admin=false)
     {
         $this->setIdentity($identity);
 
@@ -586,6 +597,8 @@ class User extends Component
             if ($duration > 0 && $this->enableAutoLogin) {
                 $this->sendIdentityCookie($identity, $duration);
             }
+            
+            $session->set('isAdmin', $this->isAdmin);
         } elseif ($this->enableAutoLogin) {
             Yii::$app->getResponse()->getCookies()->remove(new Cookie($this->identityCookie));
         }

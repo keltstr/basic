@@ -3,12 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/var/www/basic/views/forum/post.php</file>
             <file>file:/var/www/basic/controllers/SiteController.php</file>
-            <file>file:/var/www/basic/views/site/error.php</file>
+            <file>file:/var/www/basic/models/Banner.php</file>
             <file>file:/var/www/basic/controllers/ForumController.php</file>
-            <file>file:/var/www/basic/vendor/open-ecommerce/yii2-backuprestore/Module.php</file>
+            <file>file:/var/www/basic/vendor/yiisoft/yii2/web/User.php</file>
+            <file>file:/var/www/basic/views/site/about.php</file>
+            <file>file:/var/www/basic/modules/Admin/views/banner/index.php</file>
+            <file>file:/var/www/basic/views/site/index.php</file>
+            <file>file:/var/www/basic/modules/Admin/controllers/BannerController.php</file>
             <file>file:/var/www/basic/config/web.php</file>
+            <file>file:/var/www/basic/modules/Admin/views/action/index.php</file>
+            <file>file:/var/www/basic/modules/Admin/controllers/ActionController.php</file>
+            <file>file:/var/www/basic/views/forum/post.php</file>
+            <file>file:/var/www/basic/views/layouts/main.php</file>
+            <file>file:/var/www/basic/modules/Admin/views/banner/add.php</file>
+            <file>file:/var/www/basic/modules/Admin/views/layouts/admin.php</file>
         </group>
     </open-files>
 </project-private>
